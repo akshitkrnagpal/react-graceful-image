@@ -222,13 +222,15 @@ class GracefulImage extends Component {
       const {
           src,
           style,
+          loading,
           placeholderColor,
           customPlaceholder,
           noPlaceholder,
           noLazyLoad,
           ...nativeImageProps
       } = this.props
-      const { loaded } = this.state
+      const { loaded: _loaded } = this.state
+      const loaded = !loading && _loaded
       const imageSrc = loaded ? src : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
       const imageStyle = loaded
           ? {
@@ -261,6 +263,7 @@ class GracefulImage extends Component {
 
 GracefulImage.defaultProps = {
     style: {},
+    loading: false,
     placeholderColor: '#eee',
     retry: {
         count: 8,

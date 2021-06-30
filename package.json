@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/linasmnew/react-graceful-image#readme",
   "dependencies": {
-    "lodash.throttle": "^4.1.1"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

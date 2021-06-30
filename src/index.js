@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import throttle from 'lodash.throttle'
+import { throttle } from 'lodash-es'
 
 const registerObserver = (el, callback) => {
     const observer = new IntersectionObserver(

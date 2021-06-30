@@ -229,8 +229,7 @@ class GracefulImage extends Component {
           noLazyLoad,
           ...nativeImageProps
       } = this.props
-      const { loaded: _loaded } = this.state
-      const loaded = !loading && _loaded
+      const loaded = loading ? false : this.state.loaded
       const imageSrc = loaded ? src : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
       const imageStyle = loaded
           ? {
